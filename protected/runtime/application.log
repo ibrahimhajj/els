@@ -1,0 +1,33 @@
+2015/04/06 05:07:41 [error] [php] Array to string conversion (C:\wamp\www\els\protected\controllers\SiteController.php:120)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\els\index.php(13): CWebApplication->run()
+REQUEST_URI=/els/index.php/site/loader?dest=
+in C:\wamp\www\els\protected\controllers\SiteController.php (120)
+in C:\wamp\www\els\index.php (13)
+2015/04/06 05:27:05 [error] [php] Undefined index: dest (C:\wamp\www\els\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\els\index.php(13): CWebApplication->run()
+REQUEST_URI=/els/index.php/site/loader?dest=assets%5Cgames%5Cimages%5Cflash-images
+in C:\wamp\www\els\protected\controllers\SiteController.php (109)
+in C:\wamp\www\els\index.php (13)
+2015/04/06 05:27:40 [error] [php] Undefined index: dest (C:\wamp\www\els\protected\controllers\SiteController.php:109)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\els\index.php(13): CWebApplication->run()
+REQUEST_URI=/els/index.php/site/loader?dest=assets%5Cgames%5Cimages%5Cflash-images
+in C:\wamp\www\els\protected\controllers\SiteController.php (109)
+in C:\wamp\www\els\index.php (13)

@@ -1,0 +1,28 @@
+.file-div:hover {
+    background: #E0F5FF !important;
+    color: #000 !important;
+}
+
+.sortable-file-placeholder {
+    border: 2px dotted #DDDDDD;
+    height: 65px;
+    width: 50px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.armed {
+    background: #00CC66 !important;
+    color: #FFF !important;
+}
+
+.sortable-placeholder {
+    border: 2px dotted #DDDDDD;
+    height: 150px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px 10px;
+}

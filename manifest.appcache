@@ -1,0 +1,18 @@
+CACHE MANIFEST
+https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin
+
+NETWORK:
+http://localhost/els/assets/games/flash.js
+http://localhost/els/css/screen.css
+http://localhost/els/css/print.css
+http://localhost/els/assets/games/flash.css
+http://localhost/els/assets/jquery-1.11.2.min.js
+http://localhost/els/css/main.css
+http://localhost/els/css/form.css
+http://localhost/els/assets/jquery-ui-1.11.4/jquery-ui.min.css
+http://localhost/els/assets/jquery-ui-1.11.4/jquery-ui.min.js
+http://localhost/els/assets/Semantic-UI-1.11.6/dist/semantic.min.css
+https://fonts.gstatic.com/s/lato/v11/1YwB1sO8YE1Lyjf12WNiUA.woff2
+https://fonts.gstatic.com/s/lato/v11/H2DMvhDLycM56KNuAtbJYA.woff2
+http://localhost/els/assets/Semantic-UI-1.11.6/dist/semantic.min.js
+http://localhost/els/assets/Semantic-UI-1.11.6/dist/themes/default/assets/fonts/icons.woff2
