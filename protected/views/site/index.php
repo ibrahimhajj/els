@@ -3,6 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 
+echo "Hi";
 ?>
 
 <div class="image-thumbs ui black segment" style="display: none;z-index: 1000;">
