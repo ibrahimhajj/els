@@ -4,6 +4,102 @@
 $this->pageTitle=Yii::app()->name;
 
 ?>
+<div id="object-settings" class="ui vertical menu" style="position: fixed;right: 10px;bottom: 30px;z-index: 104;display: none;">
+  <div class="header item">
+    Settings
+    <i class="unhide icon" style="float: right;cursor: pointer" onclick="$(this).parent().parent().fadeToggle();"></i>
+  </div>
+  <div class="item">
+    HTML Settings
+    <div class="menu">
+      <a class="item">Width</a>
+      <a class="item">Height</a>
+      <a class="item">Position</a>
+    </div>
+  </div>
+  <a class="item">
+    Add new attribute
+  </a>
+  <a class="item">
+    Remove attribute
+  </a>
+  <div class="header item">
+    Tracking events
+  </div>
+  <a class="item">
+    On start
+  </a>
+  <a class="item">
+    On Finish
+  </a>
+  <a class="item">
+    On Success
+  </a>
+  <div class="header item">
+    Support
+  </div>
+  <a class="item">
+    FAQ
+  </a>
+  <a class="item">
+    E-mail Support
+  </a>
+</div>
+
+
+<div id="statusbar" class="ui purple segment" style="z-index: 103;">
+    <div style="float: right; border-left: 2px solid #73337D; padding-left: 10px; width: 120px;">
+        X: <span id="x-mouse-event">000</span> Y: <span id="y-mouse-event">000</span>
+    </div>
+    
+    <div class="ui ordered steps" style="display: none;">
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Load models</div>
+            <div class="description">All API models are loaded.</div>
+          </div>
+        </div>
+        <div class="completed step">
+          <div class="content">
+            <div class="title">Generate workspace.</div>
+            <div class="description">Generating workspace done.</div>
+          </div>
+        </div>
+        <div class="disabled step">
+          <div class="content">
+            <div class="title">Build activity</div>
+            <div class="description">...</div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-left-menu" class="ui left vertical inverted labeled icon sidebar menu">
+  <a class="item">
+    <i class="block layout icon"></i>
+    Test
+  </a>
+  <a class="item">
+    <i class="calendar icon"></i>
+    History
+  </a>
+  <a class="item">
+    <i class="bug icon"></i>
+    Debugging
+  </a>
+  <a class="item">
+    <i class="external icon"></i>
+    Plugins
+  </a>
+  <a class="item">
+    <i class="shop icon"></i>
+    Store
+  </a>
+  <a class="item">
+    <i class="settings icon"></i>
+    Settings
+  </a>
+</div>
 
 <div class="image-thumbs ui black segment" style="display: none;z-index: 1000;">
     <img style="width: 100%;border-radius: 4px;" src="" />
@@ -26,6 +122,7 @@ $this->pageTitle=Yii::app()->name;
 <!-- Tools to add -->
 <div id="tools" class="ui blue inverted segment stacked">
     <div class="ui green button play-all" style="float: right;"><?php echo Yii::t('string', 'Play');?></div>
+    <div id="sidebar-btn" class="ui green button" style="float: right;"><?php echo Yii::t('string', 'Sidebar');?></div>
     <i class="spinner big loading icon play-all-loading" style="float: right;margin-top: 5px;display: none;"></i>
 
     <!-- List of components -->
@@ -34,6 +131,7 @@ $this->pageTitle=Yii::app()->name;
         <div class="config">
             <i class="remove white circle icon"></i>
             <i class="add white circle icon"></i>
+            <i class="setting white icon"></i>
         </div>
         <div class="ibh-container ui button">
             <div class="caption"><i class="inbox icon"></i><?php echo Yii::t('string', 'Flash');?></div>
@@ -43,8 +141,8 @@ $this->pageTitle=Yii::app()->name;
                         <div class="ui button empty-sentence-area"><?php echo Yii::t('string', 'Clear');?></div>
                         <div class="<?php echo Yii::t('string', 'or');?>"></div>
                         <div class="ui orange button play-sentence"><?php echo Yii::t('string', 'Try');?></div>
-                        <div class="<?php echo Yii::t('string', 'or');?>"></div>
-                        <div class="ui green button finish-game"><?php echo Yii::t('string', 'Ready');?></div>
+<!--                        <div class="<?php echo Yii::t('string', 'or');?>"></div>
+                        <div class="ui green button finish-game"><?php echo Yii::t('string', 'Ready');?></div>-->
                     </div>
                 </div>
                 <div class="configuration-image" style="float: right; display: none;">
@@ -52,8 +150,8 @@ $this->pageTitle=Yii::app()->name;
                         <div class="ui button empty-image-area"><?php echo Yii::t('string', 'Clear');?></div>
                         <div class="<?php echo Yii::t('string', 'or');?>"></div>
                         <div class="ui orange button play-image"><?php echo Yii::t('string', 'Try');?></div>
-                        <div class="<?php echo Yii::t('string', 'or');?>"></div>
-                        <div class="ui green button finish-game"><?php echo Yii::t('string', 'Ready');?></div>
+<!--                        <div class="<?php echo Yii::t('string', 'or');?>"></div>
+                        <div class="ui green button finish-game"><?php echo Yii::t('string', 'Ready');?></div>-->
                     </div>
                 </div>
                 <select id="" class="ui dropdown">
@@ -119,11 +217,50 @@ $this->pageTitle=Yii::app()->name;
             <i class="add white circle icon"></i>
         </div>
         <div class="ibh-container ui button">
-            <div class="caption"><i class="inbox icon"></i><?php echo Yii::t('string', 'Highlight');?></div>
+            <div class="caption"><i class="h icon"></i><?php echo Yii::t('string', 'Highlight');?></div>
             <div class="data flash-engin">
                 
             </div>
         </div>
+    </div>
+    
+    <div class="component">
+        <div class="drag"><i class="move icon"></i><?php echo Yii::t('string', 'Search');?></div>
+        <div class="config">
+            <i class="remove white circle icon"></i>
+            <i class="add white circle icon"></i>
+        </div>
+        <div class="ibh-container ui button">
+            <div class="caption"><i class="search icon"></i><?php echo Yii::t('string', 'Search');?></div>
+            <div class="data flash-engin">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="component">
+        <div class="drag"><i class="move icon"></i><?php echo Yii::t('string', 'Presentation');?></div>
+        <div class="config">
+            <i class="remove white circle icon"></i>
+            <i class="add white circle icon"></i>
+        </div>
+        <div class="ibh-container ui button">
+            <div class="caption"><i class="announcement icon"></i><?php echo Yii::t('string', 'Presentation');?></div>
+            <div class="data flash-engin">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui dropdown item segment white" id="mortools" style="float: left;margin: 0;height: 35px;padding: 8px 10px;background: #E0E0E0;">
+      More tools
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item">Translate</a>
+        <a class="item">Generate code</a>
+        <a class="item">Save</a>
+        <a class="item">Save in database</a>
+      </div>
     </div>
 </div>
 
@@ -150,6 +287,10 @@ $this->pageTitle=Yii::app()->name;
         
 //        $("#layout .component").filter(":nth-child(" + (arguments[0] + 1) + ")").find(".play-sentence:visible").click();
 //        $("#layout .component").filter(":nth-child(" + (arguments[0] + 1) +  ")").find(".play-image:visible").click();
+    }
+    
+    function handleSettingSideBar() {
+        
     }
     
     /**
@@ -308,6 +449,7 @@ $this->pageTitle=Yii::app()->name;
     }
     
     $(document).ready(function(){
+            
         var can_drag = 0;
         var flash = [];
         
@@ -335,7 +477,7 @@ $this->pageTitle=Yii::app()->name;
                 //console.log(thbody.attr('class'));
             },
             stop: function(){
-                if(can_drag == 0){
+                if(can_drag === 0){
                     console.log(can_drag);
                     return;
                 }
@@ -348,8 +490,11 @@ $this->pageTitle=Yii::app()->name;
                 //$(component).draggable({handle: '.drag', containment: 'parent', snap: true});
                 //$(component).resizable({containment: 'parent'});
                 $(component).addClass('gradeint-background');
-                //$(component).css({"position":"absolute"});
-                $(component).css({"margin-top":"5px"});
+//                $(component).css({"position":"absolute"});
+                $(component).css({
+                    "margin-top":"5px"
+                });
+                
                 thbody.removeClass('toclone');
                 thbody.attr('id', 'theater-' + theaterCounter);
                 $(component).append(thbody);
@@ -357,7 +502,8 @@ $this->pageTitle=Yii::app()->name;
                 $(component).find('.ui.dropdown').dropdown();
 
                 /* Append component to layout */
-                $('.layout').append(component);
+                $('#layout').append(component);
+                handleSettingSideBar();
                 //thbody.removeClass('theater-' + theaterCounter);
                 theaterCounter++;
                 can_drag = 0;
@@ -387,15 +533,15 @@ $this->pageTitle=Yii::app()->name;
         /**
          * Initialize component when focus in layout
          */
-        $("body").on("click, mousedown", ".layout .drag", function(){
-            $(".layout .component").css({"z-index":"49"});
+        $("body").on("click, mousedown", "#layout .drag", function(){
+            $("#layout .component").css({"z-index":"49"});
             $(this).parent().css({"z-index":"50"});
         });
         
         /**
          * Save position of component after drop
          */
-        $("body").on("mouseup", ".layout .drag", function(){
+        $("body").on("mouseup", "#layout .drag", function(){
             $(this).parent().css({"position":"absolute"});
         });
         
@@ -414,7 +560,7 @@ $this->pageTitle=Yii::app()->name;
         });
         
         $("body").on("click", ".component", function(){
-            $(".layout .component").css({'z-index':'49'});
+            $("#layout .component").css({'z-index':'49'});
             $(this).css({'z-index':'50'});
         });
         
@@ -424,15 +570,16 @@ $this->pageTitle=Yii::app()->name;
         $(".play-all").click(function(){
             console.clear();
             $(".play-all-loading").show();
-            $(".layout .component").each(function(){
-                if($('.play-sentence:visible', this).length > 0) {
-                    $(this).attr('style', 'width: 420px;height: 400px;float: left !important;margin-left: 5px;margin-top: 5px;');
-                } else {
-                    $(this).attr('style', 'width: 420px;height: 400px;float: left !important;margin-left: 5px;margin-top: 5px;');
-                }
-                
+            $("#layout .component").each(function(){
                 var startpoint = $(this).find('#startpointtime').val();
                 if(startpoint) {
+                    $(this).find('.close').hide();
+                    if($('.play-sentence:visible', this).length > 0) {
+                        $(this).attr('style', 'width: 420px !important;height: 400px !important;float: left !important;margin-left: 5px;margin-top: 5px;');
+                    } else {
+                        $(this).attr('style', 'width: 420px !important;height: 400px !important;float: left !important;margin-left: 5px;margin-top: 5px;');
+                    }
+                    
                     $("#sentences", this).attr('style', 'overflow: auto; filter: blur(4px);-webkit-filter: blur(4px);-moz-filter: blur(4px);');
                     $(".ibh-container", this).attr('style', 'visibility: hidden;');
                     timeOutSetter($(this).index() + 1, startpoint);
@@ -441,5 +588,30 @@ $this->pageTitle=Yii::app()->name;
                 }
             });
         });
-    });        
+        
+        $('#main-left-menu').sidebar({
+            dimPage: false
+        });
+        
+        // showing multiple
+        $('#main-left-menu').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+
+        /**
+        * Show and hide sidebar.
+         */
+        $("#sidebar-btn").click(function(){
+            $('#main-left-menu').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+        });
+        
+        $("body").on("mousemove", function(event){
+            $("#x-mouse-event").html(event.pageX);
+            $("#y-mouse-event").html(event.pageY);
+        });
+        
+        $("#mortools").dropdown();
+        
+        $("body").on("click", ".config .setting", function(){
+            $("#object-settings").fadeToggle();
+        });
+    });
 </script>

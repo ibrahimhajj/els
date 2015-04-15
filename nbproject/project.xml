@@ -5,5 +5,18 @@
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
             <name>els</name>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>API</word>
+            <word>CMS</word>
+            <word>css</word>
+            <word>googleapis</word>
+            <word>gstatic</word>
+            <word>HTML</word>
+            <word>http</word>
+            <word>https</word>
+            <word>jquery</word>
+            <word>lato</word>
+            <word>localhost</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>

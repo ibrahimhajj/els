@@ -49,7 +49,7 @@
         </script>
 </head>
 
-<body>
+<body style="background: #F7F7F7 !important">
 
 <div class="container" id="page">
 

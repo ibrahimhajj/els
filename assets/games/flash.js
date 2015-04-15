@@ -172,7 +172,7 @@ $(document).ready(function(){
     /**
      * Remove sentence on click in text flash game.
      */
-    $("body").on("click", ".layout #sentences div", function(){
+    $("body").on("click", "#layout #sentences div", function(){
         var theaterID = $(this).parent().parent().parent().parent().parent().parent().find('.theater').attr('id');
         
         components[theaterID].text_sentences.splice($(this).index(), 1);
@@ -186,7 +186,7 @@ $(document).ready(function(){
     /**
      * Empty sentences area.
      */
-    $("body").on("click", ".layout .empty-sentence-area", function(){
+    $("body").on("click", "#layout .empty-sentence-area", function(){
         var theaterID = $(this).parent().parent().parent().parent().parent().find('.theater').attr('id');
         
         $(this).parent().parent().parent().find('#sentences').empty();
@@ -201,7 +201,7 @@ $(document).ready(function(){
     /**
      * Empty images area.
      */
-    $("body").on("click", ".layout .empty-image-area", function(){
+    $("body").on("click", "#layout .empty-image-area", function(){
         var theaterID = $(this).parent().parent().parent().parent().parent().find('.theater').attr('id');
         
         $(this).parent().parent().parent().find('#game-images .content').empty();
@@ -217,7 +217,7 @@ $(document).ready(function(){
     /**
      * Play the text flash game
      */
-    $("body").on("click", ".layout .play-sentence", function(){
+    $("body").on("click", "#layout .play-sentence", function(){
         var theaterID = $(this).parent().parent().parent().parent().parent().find('.theater').attr('id');
         console.log(components[theaterID]);
         if(components[theaterID].new_session) {initGame(theaterID);}
@@ -288,7 +288,7 @@ $(document).ready(function(){
     /**
      * play image flash game
      */
-    $("body").on("click", ".layout .play-image", function(){
+    $("body").on("click", "#layout .play-image", function(){
         
         var theaterID = $(this).parent().parent().parent().parent().parent().find('.theater').attr('id');
         
@@ -405,7 +405,7 @@ $(document).ready(function(){
         }, 50);
     });
     
-    $("body").on("click", ".layout .finish-game", function(){
+    $("body").on("click", "#layout .finish-game", function(){
         var theaterID = $(this).parent().parent().parent().parent().parent().find('.theater').attr('id');
         components[theaterID].finishGame = true;
         $(this).parent().find('.play-image').click();
