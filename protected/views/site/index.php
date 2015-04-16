@@ -2,7 +2,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-var_dump(Yii::app()->basePath);
+
 ?>
 <div id="object-settings" class="ui vertical menu" style="position: fixed;right: 5px;bottom: 30px;z-index: 104;display: none;">
   <div class="header item">
