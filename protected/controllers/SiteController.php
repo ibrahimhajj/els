@@ -111,9 +111,11 @@ class SiteController extends Controller
                 echo $e->getMessage();
             }
         }
-        
+        /* 
+         * TODO: You changed \\ with / to work on linux path.
+         */
         public function actionLoader() {
-            $dir = Yii::app()->basePath . "\\..\\" . $_POST['dest'];
+            $dir = Yii::app()->basePath . "/../" . $_POST['dest'];
             $files = array();
             
             if(is_dir($dir)){
