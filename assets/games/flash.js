@@ -128,7 +128,7 @@ $(document).ready(function(){
                 $(this).parent().find(".image-flash").fadeIn();
                 $(this).parent().find('.configuration').hide();
                 $(this).parent().find('.configuration-image').fadeIn();
-                filesLoader('assets/games/images/flash-images',$(this).parent().find('#all_image_files'), '.game-images .content');
+                filesLoader('assets\\games\\images\\flash-images',$(this).parent().find('#all_image_files'), '.game-images .content');
                 break;
             case "2":
                 $(this).parent().find(".image-flash").hide();
@@ -529,7 +529,7 @@ $(document).ready(function(){
     });
     
     $("body").on("change", "#image-file-input", function(){
-        filesUploader(this, 'assets/games/images/flash-images');
+        filesUploader(this, 'assets\\games\\images\\flash-images');
     });
     
     /**
