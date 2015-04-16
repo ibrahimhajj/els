@@ -2,9 +2,9 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-
+var_dump(Yii::app()->basePath);
 ?>
-<div id="object-settings" class="ui vertical menu" style="position: fixed;right: 10px;bottom: 30px;z-index: 104;display: none;">
+<div id="object-settings" class="ui vertical menu" style="position: fixed;right: 5px;bottom: 30px;z-index: 104;display: none;">
   <div class="header item">
     Settings
     <i class="unhide icon" style="float: right;cursor: pointer" onclick="$(this).parent().parent().fadeToggle();"></i>
@@ -48,7 +48,7 @@ $this->pageTitle=Yii::app()->name;
 
 
 <div id="statusbar" class="ui purple segment" style="z-index: 103;">
-    <div style="float: right; border-left: 2px solid #73337D; padding-left: 10px; width: 120px;">
+    <div style="float: left; border-right: 2px solid #73337D; padding-right: 10px; width: 120px;">
         X: <span id="x-mouse-event">000</span> Y: <span id="y-mouse-event">000</span>
     </div>
     
@@ -74,7 +74,7 @@ $this->pageTitle=Yii::app()->name;
     </div>
 </div>
 
-<div id="main-left-menu" class="ui left vertical inverted labeled icon sidebar menu">
+<div id="main-left-menu" class="ui right vertical inverted labeled icon sidebar menu">
   <a class="item">
     <i class="block layout icon"></i>
     Test
@@ -120,11 +120,23 @@ $this->pageTitle=Yii::app()->name;
 </div>
 </div>
 <!-- Tools to add -->
-<div id="tools" class="ui blue inverted segment stacked">
-    <div class="ui green button play-all" style="float: right;"><?php echo Yii::t('string', 'Play');?></div>
-    <div id="sidebar-btn" class="ui green button" style="float: right;"><?php echo Yii::t('string', 'Sidebar');?></div>
+<div id="tools">
+    <div class="ui green button play-all" style="width: 100%;"><?php echo Yii::t('string', 'Play');?></div>
+    <div id="sidebar-btn" class="ui green button" style="width: 100%;margin-top: 5px;"><?php echo Yii::t('string', 'Sidebar');?></div>
     <i class="spinner big loading icon play-all-loading" style="float: right;margin-top: 5px;display: none;"></i>
 
+    
+    <div class="ui dropdown item segment white" id="mortools" style="margin: 0;height: 35px;padding: 8px 10px;background: #E0E0E0;margin-top: 5px;width: 100%">
+      More tools
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item">Translate</a>
+        <a class="item">Generate code</a>
+        <a class="item">Save</a>
+        <a class="item">Save in database</a>
+      </div>
+    </div>
+    
     <!-- List of components -->
     <div class="component">
         <div class="drag"><i class="move icon"></i><?php echo Yii::t('string', 'Flash');?></div>
@@ -252,16 +264,6 @@ $this->pageTitle=Yii::app()->name;
         </div>
     </div>
     
-    <div class="ui dropdown item segment white" id="mortools" style="float: left;margin: 0;height: 35px;padding: 8px 10px;background: #E0E0E0;">
-      More tools
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">Translate</a>
-        <a class="item">Generate code</a>
-        <a class="item">Save</a>
-        <a class="item">Save in database</a>
-      </div>
-    </div>
 </div>
 
 <!-- Edit layer -->
